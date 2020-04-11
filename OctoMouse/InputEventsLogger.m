@@ -178,7 +178,7 @@
             format = [format stringByAppendingString:@"mi"];
             break;
         default:
-            format = [format stringByAppendingString:@"km"];
+            format = [format stringByAppendingString:@""];
             break;
     }
     
@@ -203,7 +203,7 @@
     
     int days = time;
     
-    return [NSString stringWithFormat:@"%dd %02d:%02d:%02d", days, hours, minutes, seconds];
+    return [NSString stringWithFormat:@"%dd", days];
 }
 
 @end

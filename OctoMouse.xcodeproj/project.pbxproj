@@ -305,7 +305,7 @@
 				ORGANIZATIONNAME = Takohi;
 				TargetAttributes = {
 					DD4F7C0313C30F9F00825C6E = {
-						DevelopmentTeam = DLDHLCUF8Z;
+						DevelopmentTeam = B284DYX8KQ;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -319,6 +319,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				fr,
 				de,
@@ -518,6 +519,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B284DYX8KQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
 				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";
@@ -535,9 +537,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = OctoMouse/OctoMouse.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B284DYX8KQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctoMouse/OctoMouse-Prefix.pch";
 				INFOPLIST_FILE = "OctoMouse/OctoMouse-Info.plist";

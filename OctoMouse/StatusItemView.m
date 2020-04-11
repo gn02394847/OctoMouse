@@ -61,8 +61,9 @@
         NSImage *mouseIcon = (self.isHighlighted != inverseColor)  ? _alternateMouseImage : _mouseImage;
         NSImage *keyboardIcon = (self.isHighlighted != inverseColor) ? _alternateKeyboardImage : _keyboardImage;
         NSSize iconSize = [mouseIcon size];
-        if(iconSize.width == 0)
-            return;
+        iconSize.width = 0;
+        // if(iconSize.width == 0)
+        //     return;
         
         InputEventsLogger* global = [[InputEventsController shared] globalLogger];
         int mouseDown = [global mouseDown];
@@ -108,9 +109,9 @@
         NSPoint iconPoint = NSMakePoint(0, (thickness - iconSize.height) / 2);
         
         if (menuBarStyle < 1) {
-            iconPoint.x = x;
-            [keyboardIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-            x += iconSize.width + margin;
+            // iconPoint.x = x;
+            // [keyboardIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+            // x += iconSize.width + margin;
             
             NSPoint keyDownPoint = NSMakePoint(x, 0);
             NSRect keyDownRect = NSMakeRect(keyDownPoint.x, keyDownPoint.y, _lastKeyboardLength, keyboardTextSize.height);
@@ -122,9 +123,9 @@
             x += _lastKeyboardLength + margin;
         }
         
-        iconPoint.x = x;
-        [mouseIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-        x += iconSize.width + margin;
+        // iconPoint.x = x;
+        // [mouseIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+        // x += iconSize.width + margin;
         
         NSPoint mouseDistancePoint = NSMakePoint(x, 0);
         NSRect mouseDistanceRect = NSMakeRect(mouseDistancePoint.x, mouseDistancePoint.y, _lastMouseLength, mouseTextSize.height);
@@ -137,14 +138,15 @@
         float margin = 5;
         NSImage *mouseIcon = self.isHighlighted ? _alternateMouseImage : _mouseImage;
         NSSize iconSize = [mouseIcon size];
-        if(iconSize.width == 0)
-            return;
+        iconSize.width = 0;
+        // if(iconSize.width == 0)
+        //     return;
         
         float length = 2 * margin + iconSize.width;
         [_statusItem setLength:length];
         
-        NSPoint iconPoint = NSMakePoint(margin, (thickness - iconSize.height) / 2);
-        [mouseIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+        // NSPoint iconPoint = NSMakePoint(margin, (thickness - iconSize.height) / 2);
+        // [mouseIcon drawAtPoint:iconPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
     }
 }
 
